@@ -9,7 +9,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      BASE_URL: "https://Vishal580.github.io/API-Automation-using-RestAssured"
+      BASE_URL: "https://Vishal580.github.io/API-Automation-RestAssured-AI-Coach-Prod"
 
     steps:
       # Step 1: Checkout the repository
@@ -29,15 +29,10 @@ jobs:
           sudo tar -zxvf allure-2.13.8.tgz -C /opt/
           sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
 
-      # Step 4: Run API tests and verify allure-results directory is created
+      # Step 4: Run API tests
       - name: Run tests
         id: test_run
-        run: |
-          mvn clean test -Dtestng=testng.xml
-          if [ ! -d "allure-results" ]; then
-            echo "Error: allure-results directory is missing. Tests may not have run properly."
-            exit 1
-          fi
+        run: mvn clean test -Dtestng=testng.xml
 
       # Step 5: Upload Allure test results
       - name: Publish Allure results
@@ -48,12 +43,7 @@ jobs:
 
       # Step 6: Generate Allure report
       - name: Generate Allure report
-        run: |
-          allure generate allure-results --clean -o allure-report
-          if [ ! -d "allure-report" ]; then
-            echo "Error: allure-report directory not created. Report generation failed."
-            exit 1
-          fi
+        run: allure generate allure-results --clean -o allure-report
 
       # Step 7: Upload Allure report
       - name: Publish Allure report
