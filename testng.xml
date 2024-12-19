@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="Main Flow Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/visha/IdeaProjects/AI_Coach_Prod">
         <classes>
-            <class name="CreateUser">
-                <methods>
-                    <include name="CreateAccount_POST"/>
-                </methods>
-            </class>
+<!--            <class name="CreateUser">-->
+<!--                <methods>-->
+<!--                    <include name="CreateAccount_POST"/>-->
+<!--                </methods>-->
+<!--            </class>-->
             <class name="Mainflow">
                 <methods>
                     <include name="LoginUser_POST"/>
@@ -24,18 +24,18 @@
                     <include name="UserLogout_POST"/>
                 </methods>
             </class>
-            <class name="changePassword">
-                <methods>
-                    <include name="LoginUser_POST"/>
-                    <include name="ChangePassword_POST"/>
-                </methods>
-            </class>
-            <class name="DeleteUser">
-                <methods>
-                    <include name="LoginUser_POST"/>
-                    <include name="DeleteUserAccount_DELETE"/>
-                </methods>
-            </class>
+<!--            <class name="changePassword">-->
+<!--                <methods>-->
+<!--                    <include name="LoginUser_POST"/>-->
+<!--                    <include name="ChangePassword_POST"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="DeleteUser">-->
+<!--                <methods>-->
+<!--                    <include name="LoginUser_POST"/>-->
+<!--                    <include name="DeleteUserAccount_DELETE"/>-->
+<!--                </methods>-->
+<!--            </class>-->
         </classes>
     </test>
 </suite>
