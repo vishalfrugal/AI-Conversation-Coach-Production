@@ -96,9 +96,9 @@ jobs:
           server_port: 588
           username: vishalkhetriba@gmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}  # Use GitHub secret for security
-          subject: 'Test Results Notification'
+          subject: '⚠️ Test Failure Alert of AI Coach [Production]: Immediate Attention Required'
           body: |
-            The API tests have failed. You can review the test report at the following URL:
+            The API tests encountered failures. You can review the test report by visiting the following URL:
             ${{ env.DEPLOYMENT_URL }}
           to: vishal@frugaltestingin.com,yogeshk@frugaltesting.com
           from: vishalkhetriba@gmail.com
