@@ -28,17 +28,18 @@ jobs:
           curl -o allure-2.13.8.tgz -OLs https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz
           sudo tar -zxvf allure-2.13.8.tgz -C /opt/
           sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
+
       # Step 4: Run API tests
       - name: Run tests
         id: test_run
         run: mvn clean test -Dtestng=testng.xml
 
-      # Step 5: Upload Allure test results
-      - name: Publish Allure results
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results
-          path: allure-results
+#      # Step 5: Upload Allure test results
+#      - name: Publish Allure results
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: allure-results
+#          path: allure-results
 
       # Step 6: Generate Allure report
       - name: Generate Allure report
@@ -85,6 +86,7 @@ jobs:
         run: |
           echo "DEPLOYMENT_URL=${{ env.BASE_URL }}/${{ github.run_number }}/#" >> $GITHUB_ENV
           echo "Deployment URL is set to ${{ env.DEPLOYMENT_URL }}"
+
       # Step 12: Send Email Notification if tests fail
       - name: Send Email Notification
         if: failure()   # Only send if there were test failures
