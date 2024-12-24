@@ -84,7 +84,7 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
-          server_port: 588
+          server_port: 587
           username: vishalkhetriba@gmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}  # Use GitHub secret for security
           subject: '⚠️ Test Failure Alert of AI Coach [Production]: Immediate Attention Required'
