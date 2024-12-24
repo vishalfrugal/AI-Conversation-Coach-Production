@@ -1,4 +1,4 @@
-name: AI Coach Staging API Testing
+name: AI Coach Production API Testing
 
 on:
   workflow_dispatch:  # Manual trigger
@@ -87,7 +87,7 @@ jobs:
           server_port: 588
           username: vishalkhetriba@gmail.com
           password: ${{ secrets.EMAIL_PASSWORD }}  # Use GitHub secret for security
-          subject: '⚠️ Test Failure Alert of AI Coach [Staging]: Immediate Attention Required'
+          subject: '⚠️ Test Failure Alert of AI Coach [Production]: Immediate Attention Required'
           body: |
             The API tests encountered failures. You can review the test report by visiting the following URL:
             ${{ env.DEPLOYMENT_URL }}
