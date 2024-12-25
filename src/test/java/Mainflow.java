@@ -10,7 +10,7 @@ public class Mainflow {
     public String authorizationToken;
     public String baseURI="https://ai-coach.bes-learning.com/api/v1";
 
-    public String userEmail ="vishal@yopmail.com";
+    public String userEmail ="vishal@frugaltestingin.com";
     public String userPassword = "Vishal@123";
 
     public String languageId = "22";
