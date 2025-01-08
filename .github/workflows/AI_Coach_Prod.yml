@@ -91,5 +91,5 @@ jobs:
           body: |
             The API tests encountered failures. You can review the test report by visiting the following URL:
             ${{ env.DEPLOYMENT_URL }}
-          to: vishal@frugaltestingin.com,yogeshk@frugaltesting.com
+          to: vishal@frugaltestingin.com
           from: vishalkhetriba@gmail.com
