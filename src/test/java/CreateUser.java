@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 public class CreateUser {
 
     Randomgenerator email = new Randomgenerator();
-    public String baseURI="https://ai-coach.bes-learning.com/api/v1";
+    public String baseURI="https://ai-coach.bes-learning.com/api/v1"; //base url
 
     public String signingEmail ="Thor"+email.RandomNumberString()+"@yopmail.com";
 
