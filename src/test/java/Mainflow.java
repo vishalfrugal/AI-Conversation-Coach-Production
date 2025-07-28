@@ -11,7 +11,7 @@ public class Mainflow {
     public String baseURI="https://ai-coach.bes-learning.com/api/v1";
 
     public String userEmail ="vishal@frugaltestingin.com";
-    public String userPassword = "Vishal@123";
+    public String userPassword = "Vishal@0580";
 
     public String languageId = "22";
     public String language = "English";
